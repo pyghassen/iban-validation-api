@@ -4,4 +4,14 @@ services:
     build: .
     ports:
      - "8000:8000"
+    volumes:
+      - ./:/opt/
     command: "gunicorn -c gunicorn.conf.py server:http_server"
+
+  test:
+    build:
+      context: ./
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./:/opt/
+    command: "py.test -vv -x tests/"
