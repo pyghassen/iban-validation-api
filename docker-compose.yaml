@@ -6,7 +6,7 @@ services:
      - "8000:8000"
     volumes:
       - ./:/opt/
-    command: "gunicorn -c gunicorn.conf.py server:http_server"
+    command: "python3 server.py"
 
   test:
     build:
@@ -14,4 +14,4 @@ services:
       dockerfile: Dockerfile.test
     volumes:
       - ./:/opt/
-    command: "py.test -vv -x tests/"
+    command: "py.test -vv -x tests"
