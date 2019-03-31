@@ -1,0 +1,2 @@
+class InvalidIBANError(BaseException):
+    pass
