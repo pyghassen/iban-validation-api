@@ -29,7 +29,7 @@ How to start
 
 4. Send request to the server
 
-    `./send_request.sh`
+    `./send_test_requests.sh`
 
 API reference
 =============
