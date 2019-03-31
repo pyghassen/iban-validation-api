@@ -21,7 +21,7 @@ How to start
 
 2. Run the tests
 
-    `.test.sh`
+    `./test.sh`
 
 3. Start the server
 
@@ -63,3 +63,17 @@ API reference
         + body
 
             {"valid_iban": false}
+
+Common Issues
+=============
+
+1. Failing to build the container:
+
+    ```
+    Building test
+    ERROR: Error processing tar file(exit status 1): unexpected EOF
+    ```
+
+Just run the following command:
+
+    `./clean.sh`
