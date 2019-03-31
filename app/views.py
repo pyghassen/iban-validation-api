@@ -11,7 +11,7 @@ def health_view(request):
     return json({"status": "ok"})
 
 
-@http_server.route("/iban/validate/")
+@http_server.route("/iban/validate/<iban>")
 def validate_iban_view(request, iban):
     try:
         validate_iban(iban)
