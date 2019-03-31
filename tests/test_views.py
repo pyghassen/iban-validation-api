@@ -3,9 +3,9 @@ from unittest.mock import Mock
 from app.views import health_view, validate_iban_view
 
 
-def test_health_returns_expected_success_message():
+def test_health__view_returns_expected_success_message():
     """
-    Test health view return the expected message.
+    Test health view returns the expected sucess message.
     """
     expected_message = '{"status":"ok"}'
     mocked_request = Mock()
@@ -15,9 +15,9 @@ def test_health_returns_expected_success_message():
     assert expected_message == response.body.decode()
 
 
-def test_validate_returns_expected_success_message():
+def test_validate_iban_view_returns_expected_success_message():
     """
-    Test health view return the expected message.
+    Test validate_iban_view returns the expected sucess message.
     """
     expected_message = '{"valid_iban":true}'
     mocked_request = Mock()
