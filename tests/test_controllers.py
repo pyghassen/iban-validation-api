@@ -21,7 +21,7 @@ def test_validate_iban_calls_schwifty_iban_function():
     Test passing a valid IBAN value to the validate_iban controller will call
     schwifty IBAN function.
     """
-    iban = 'DX89 3704 0044 0532 0130 00'
+    iban = 'DE89 3704 0044 0532 0130 00'
 
     with patch('app.controllers.IBAN') as PatchedIBAN:
         validate_iban(iban)
